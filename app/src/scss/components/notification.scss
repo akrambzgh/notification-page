@@ -1,0 +1,148 @@
+@use "../abstracts/function.scss" as fun;
+@use "../abstracts/mixins.scss" as mix;
+@use "../utils/vars.scss" as vars;
+
+.notification {
+  @include mix.flex(flex-start, flex-start, row);
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+  padding: 16px;
+  cursor: pointer;
+  transition: vars.$transitioDuaration;
+  .edit-notification {
+    @include mix.flex(space-around, center, row);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      background-color: transparent;
+      backdrop-filter: blur(3px);
+      transition: vars.$transitioDuaration;
+      z-index: 6;
+    }
+    .read,
+    .delete {
+      opacity: 0;
+      z-index: 7;
+      transition: vars.$transitioDuaration;
+      img {
+        cursor: pointer;
+        user-select: none;
+      }
+    }
+    .delete {
+      display: none;
+    }
+    &:hover {
+      &::before {
+        width: 100%;
+        height: 100%;
+      }
+      .read,
+      .delete {
+        opacity: 1;
+      }
+    }
+  }
+  &.unread {
+    background-color: map-get(
+      $map: vars.$natural,
+      $key: "lightGrayishBlueSecond"
+    );
+    .delete {
+      display: block;
+    }
+    .header {
+      span.unread-mess {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: map-get($map: vars.$primary, $key: "Red");
+        display: inline-block;
+      }
+    }
+  }
+  .user-img {
+    margin-right: 10px;
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .header {
+    h3 {
+      font-size: 16px;
+      color: map-get($map: vars.$natural, $key: "grayishBlue");
+      font-weight: 300;
+      display: inline;
+      span.user {
+        color: map-get($map: vars.$natural, $key: "veryDarkBlue");
+      }
+      span.notification-main-text {
+        color: map-get($map: vars.$natural, $key: "darkGrayishBlue");
+      }
+      span:is(.user, .notification-main-text) {
+        font-weight: bold;
+        font-size: 17px;
+        user-select: none;
+        cursor: pointer;
+        transition: vars.$transitioDuaration;
+        &:hover {
+          color: map-get($map: vars.$primary, $key: "Blue");
+        }
+      }
+    }
+    span.unread-mess {
+      display: none;
+    }
+    .time {
+      span {
+        font-size: 16px;
+        color: map-get($map: vars.$natural, $key: "darkGrayishBlue");
+        font-weight: 300;
+      }
+    }
+  }
+  &.img {
+    position: relative;
+    img.seted-pic {
+      position: absolute;
+      right: 0px;
+      @include mix.largeScreen() {
+        right: 30px;
+      }
+      width: 60px;
+      height: 60px;
+    }
+  }
+  &.msg {
+    z-index: 8;
+    .message {
+      border: 1px solid map-get($map: vars.$natural, $key: "grayishBlue");
+      border-radius: 4px;
+      background-color: map-get($map: vars.$natural, $key: "White");
+      padding: 15px;
+      color: map-get($map: vars.$natural, $key: "darkGrayishBlue");
+      cursor: pointer;
+      transition: vars.$transitioDuaration;
+      &:hover {
+        background-color: map-get(
+          $map: vars.$natural,
+          $key: "lightGrayishBlueSecond"
+        );
+      }
+    }
+  }
+}
