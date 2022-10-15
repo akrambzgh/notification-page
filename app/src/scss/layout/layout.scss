@@ -7,6 +7,7 @@ body {
   @include mix.flex(center, center, row);
   width: 100%;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 main.main {
@@ -55,5 +56,7 @@ main.main {
   }
   .notifications {
     @include mix.flex(center, center, column);
+    background-color: map-get($map: vars.$natural, $key: "White");
+    position: relative;
   }
 }

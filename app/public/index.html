@@ -27,7 +27,7 @@
     <main class="main">
       <div class="notification-reading">
         <div class="notification-number">
-          <h3>Notifications <span>3</span></h3>
+          <h3>Notifications <span class="notification-number-span">3</span></h3>
         </div>
         <div class="make-as-read">
           <button class="make-as-read-btn">Mark all as read</button>
@@ -36,7 +36,7 @@
       <div class="notifications">
         <div class="notification unread">
           <div class="user-img">
-            <img src="../../assets/images/avatar-mark-webber.webp" alt="" />
+            <img src="../../assets/images/avatar-mark-webber.webp" />
           </div>
           <div class="header">
             <h3>
@@ -50,22 +50,10 @@
               <span>1m ago</span>
             </div>
           </div>
-          <div class="edit-notification">
-            <div class="read">
-              <img src="../../assets/images/trash-can.svg" alt="" srcset="" />
-            </div>
-            <div class="delete">
-              <img
-                src="../../assets/images/checked-checkbox.png"
-                alt=""
-                srcset=""
-              />
-            </div>
-          </div>
         </div>
         <div class="notification unread">
           <div class="user-img">
-            <img src="../../assets/images/avatar-angela-gray.webp" alt="" />
+            <img src="../../assets/images/avatar-angela-gray.webp" />
           </div>
           <div class="header">
             <h3><span class="user">Angela Gray</span> followed you</h3>
@@ -74,22 +62,10 @@
               <span>5m ago</span>
             </div>
           </div>
-          <div class="edit-notification">
-            <div class="read">
-              <img src="../../assets/images/trash-can.svg" alt="" srcset="" />
-            </div>
-            <div class="delete">
-              <img
-                src="../../assets/images/checked-checkbox.png"
-                alt=""
-                srcset=""
-              />
-            </div>
-          </div>
         </div>
         <div class="notification unread">
           <div class="user-img">
-            <img src="../../assets/images/avatar-jacob-thompson.webp" alt="" />
+            <img src="../../assets/images/avatar-jacob-thompson.webp" />
           </div>
           <div class="header">
             <h3>
@@ -99,18 +75,6 @@
             <span class="unread-mess"></span>
             <div class="time">
               <span>1d ago</span>
-            </div>
-          </div>
-          <div class="edit-notification">
-            <div class="read">
-              <img src="../../assets/images/trash-can.svg" alt="" srcset="" />
-            </div>
-            <div class="delete">
-              <img
-                src="../../assets/images/checked-checkbox.png"
-                alt=""
-                srcset=""
-              />
             </div>
           </div>
         </div>
@@ -138,22 +102,10 @@
               </p>
             </div>
           </div>
-          <div class="edit-notification">
-            <div class="read">
-              <img src="../../assets/images/trash-can.svg" alt="" srcset="" />
-            </div>
-            <div class="delete">
-              <img
-                src="../../assets/images/checked-checkbox.png"
-                alt=""
-                srcset=""
-              />
-            </div>
-          </div>
         </div>
         <div class="notification img">
           <div class="user-img">
-            <img src="../../assets/images/avatar-kimberly-smith.webp" alt="" />
+            <img src="../../assets/images/avatar-kimberly-smith.webp" />
           </div>
           <div class="header">
             <h3>
@@ -164,18 +116,6 @@
               <span>2 weeks ago</span>
             </div>
           </div>
-          <div class="edit-notification">
-            <div class="read">
-              <img src="../../assets/images/trash-can.svg" alt="" srcset="" />
-            </div>
-            <div class="delete">
-              <img
-                src="../../assets/images/checked-checkbox.png"
-                alt=""
-                srcset=""
-              />
-            </div>
-          </div>
           <img
             class="seted-pic"
             src="../../assets/images/image-chess.webp"
@@ -184,7 +124,7 @@
         </div>
         <div class="notification">
           <div class="user-img">
-            <img src="../../assets/images/avatar-nathan-peterson.webp" alt="" />
+            <img src="../../assets/images/avatar-nathan-peterson.webp" />
           </div>
           <div class="header">
             <h3>
@@ -199,22 +139,10 @@
               <span>2 weeks ago</span>
             </div>
           </div>
-          <div class="edit-notification">
-            <div class="read">
-              <img src="../../assets/images/trash-can.svg" alt="" srcset="" />
-            </div>
-            <div class="delete">
-              <img
-                src="../../assets/images/checked-checkbox.png"
-                alt=""
-                srcset=""
-              />
-            </div>
-          </div>
         </div>
         <div class="notification">
           <div class="user-img">
-            <img src="../../assets/images/avatar-anna-kim.webp" alt="" />
+            <img src="../../assets/images/avatar-anna-kim.webp" />
           </div>
           <div class="header">
             <h3>
@@ -227,22 +155,17 @@
               <span>2 weeks ago</span>
             </div>
           </div>
-          <div class="edit-notification">
-            <div class="read">
-              <img src="../../assets/images/trash-can.svg" alt="" srcset="" />
-            </div>
-            <div class="delete">
-              <img
-                src="../../assets/images/checked-checkbox.png"
-                alt=""
-                srcset=""
-              />
-            </div>
-          </div>
         </div>
       </div>
     </main>
-
+    <div class="alert">
+      <h1>No Unread Message</h1>
+      <img src="../../assets/images/check-circle.svg" />
+      <button class="close">
+        <img src="../../assets/images/close.svg" />
+      </button>
+    </div>
+    <div class="overlayer"></div>
     <script src="../src/js/script.js"></script>
   </body>
 </html>
